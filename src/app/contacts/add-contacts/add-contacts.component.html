@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="card mt-5 ms-5 mr-5">
+        <div class="card-body">
+          <h5 class="card-title">Add Contact</h5>
+            <form >
+                <input [(ngModel)]="newContact.name" type="text" name="name" class="form-control" placeholder="Contact Name"><br>
+                <input [(ngModel)]="newContact.Lname" type="text" name="Lname" class="form-control" placeholder="Contact Last Name"><br>
+                <input [(ngModel)]="newContact.tell" type="tel" name="tell" class="form-control" placeholder="Contact Phone"><br>
+                <div class="form-check">
+                    <input [(ngModel)]="newContact.status" value="active"
+                    class="form-check-input" type="radio" name="status" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Contact Account is Active
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input [(ngModel)]="newContact.status" value="inactive"
+                     class="form-check-input" type="radio" name="status" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Contact Account is Inactive
+                    </label>
+                  </div><br>
+                <button type="submit" (click)="addContact()" class="btn btn-success">Add Contact</button>  
+            </form>
+        </div>
+      </div>
+      <!-- <button class="btn btn-primary" (click)="gotoAdd()">Add New Contact</button> -->
+</div>

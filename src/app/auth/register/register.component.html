@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="card mt-5 ms-5 mr-5">
+        <div class="card-body">
+          <h5 class="card-title">Add Contact</h5>
+          <form [formGroup]='registerForm' (submit)="register()">
+            <h1 class="h3 mb-3 fw-normal">Register</h1>
+            <div>
+              <input class="form-control" formControlName="username" placeholder="UserName" >
+              <div class="alert alert-danger" *ngIf="f['username'].touched && !f['username'].valid">
+                <div *ngIf="f['username'].errors?.['required']">required</div>
+                <div *ngIf="f['username'].errors?.['minlength']">Must contain at leat 3 chars</div>
+                <div *ngIf="f['username'].errors?.['maxlength']">Must not contain more than 6 chars</div>
+              </div>
+           
+            </div>
+            <br>
+            <div>
+              <input type="password" class="form-control" formControlName="password" placeholder="Password">
+            </div>
+            <br><br>
+            <button class="btn btn-primary" type="submit" >Register</button>
+            <br>
+            <br>
+            <div *ngIf="success == true" style="color: green;">Registration Successful!! Please</div>
+            <!-- <p *ngIf="errMessage" class="alert alert-danger alert-dismissible fade show">{{errMessage}}</p> -->
+        </form>
+        
+        </div>
+      </div>
+      <!-- <button class="btn btn-primary" (click)="gotoAdd()">Add New Contact</button> -->
+</div>
