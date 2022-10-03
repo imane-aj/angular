@@ -1,5 +1,10 @@
 # FirstProject
 
+// when u download the app , write the commands: 
+      - npm install
+      
+      - npx json-server --watch db.json
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
 
 ## Development server
